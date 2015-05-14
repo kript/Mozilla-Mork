@@ -834,9 +834,11 @@ http://www.jwz.org/doc/mailsum.html
 http://bugzilla.mozilla.org/show_bug.cgi?id=241438
 
 I would recommend reading the source of the perl script first in the list above.  This module was taken from work Jamie Zawinski did in that script, so a huge thanks - I admit I might not have tackled this without this as a starting point!
-Jamie has quite a lot to say about the Mork file format, and its worth reading.  That I know of, this is only the second module to get involved with Mork, and we're both based on Jamie's code..
+Jamie has quite a lot to say about the Mork file format, and its worth reading.  
+At the tme of writing this was only the second module to get involved with Mork, and we're both based on Jamie's code..
 
-My employers website: http://www.ipaccess.com.  My thanks to them for allowing me to work on this and release it as open source.
+My thanks to http://www.ipaccess.com for allowing me to work on this at the time 
+and release it as open source.
 
 =head1 AUTHOR
 
