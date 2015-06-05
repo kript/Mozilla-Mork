@@ -788,14 +788,21 @@ Mozilla::Mork - Perl extension for reading Mork hash database file such as are u
 	#get a reference to an array of hash's
 	my $MorkDetails = Mozilla::Mork->new($file);
 	my $results = $MorkDetails->ReturnReferenceStructure();
-	#process those results
-	# for each line in the database
-	my %array = %{ $results->[0] };
-	my @field_names = sort(keys(%array));
-	#my @field_names = $MorkDetails->ListHeaders();
-	map { print "Field Names: $_\n"; } @field_names;
-	print "\ndone!\n";
+	
+	# length of the database
+	$length = scalar @$results;
+	print "Nb items: $length\n";
 
+	# for each email in the database
+	for (my $i=0; $i < $length; $i++) {
+		my $record = $results->[$i];
+		my $flags = @$record{'flags'};
+
+		# printing all fields
+		foreach $key (sort (keys($record))) {
+			print "$key \t\t@$record{$key}\n";
+		}
+	}
 
 =head1 DESCRIPTION
 
